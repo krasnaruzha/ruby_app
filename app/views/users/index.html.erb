@@ -6,7 +6,7 @@
     <th>Email</th>
   </tr>
 
-<% @users.each do |User| %>
+<%= @user.each |User| do %>
   <tr>
     <td><%=h User.name %></td>
     <td><%=h User.email %></td>
