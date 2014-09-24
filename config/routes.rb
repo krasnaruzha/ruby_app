@@ -4,10 +4,23 @@ Rails.application.routes.draw do
   get 'pages/users'
   get 'pages/users/new'
   get 'pages/about'
+  get 'pages/help'
 
   resources :users
   resources :microposts 
   resources :pages
+  
+
+  get '/contact', :to => 'pages#contact', :as => 'contact'
+  get '/about', :to => 'pages#about', :as => 'about'
+  get '/help', :to => 'pages#help', :as => 'help'
+  get '/home', :to => 'pages#home', :as => 'home'
+  get 'signup', :to =>'pages/users/new', :as => 'signup'
+
+  #map.about   '/about',   :controller => 'pages', :action => 'about'
+  #map.help    '/help',    :controller => 'pages', :action => 'help'
+  #map.home    '/home',    :controller => 'pages', :action => 'home'
+  #map.users   '/users',   :controller => 'pages', :action => 'users'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

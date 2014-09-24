@@ -8,6 +8,7 @@ class UsersController < ApplicationController
  end
 
 def new
+@title = "Sign up"
 @users = User.new(params[:user])
  if @users.save
 # Handle a successful save.
